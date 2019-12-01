@@ -1,0 +1,54 @@
+#!/bin/bash
+# comments
+while true
+do
+clear
+echo "======                                                             ========"
+echo "DoXXeR                                                             CS Raves"
+echo "======                                                             ========"
+echo ""
+echo "1. Name Search"
+echo "2. Phone number Search (US)"
+echo "3. IP Look UP"
+echo ""
+echo -e "\n"
+echo -e "Option: \c"
+read answer
+case "$answer" in
+
+1)
+clear
+echo "==========="
+echo "Name Search"
+echo "==========="
+echo ""
+echo -e "Type Name: \c"
+read answer
+firefox https://www.whitepages.com/name/"$answer"?fs=1&q="$answer"
+;;
+
+2)
+clear
+echo "============"
+echo "Phone Search"
+echo "============"
+echo ""
+echo -e "Type Number \c"
+read answer
+firefox https://www.whitepages.com/phone/"$answer"
+;;
+
+3)
+clear
+echo "========="
+echo "IP Search"
+echo "========="
+echo ""
+echo -e "Type IP: \c"
+read answer
+firefox https://whatismyipaddress.com/ip/"$answer"
+;;
+
+esac
+echo -e "Press Return to go back \c"
+done
